@@ -1,0 +1,124 @@
+.Header {
+  padding: 75px 65px;
+}
+
+.Header .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-body {
+    padding-inline: 90px;
+    text-align: center;
+
+    h1 {
+      font-weight: 500;
+      font-size: 50px;
+      margin-block: 0 20px;
+    }
+
+    p {
+      padding-bottom: 50px;
+    }
+
+    a {
+      color: var(--blue);
+    }
+  }
+
+  .main-button {
+    position: relative;
+    background-color: var(--electric-blue);
+    padding: 17px 29px;
+    width: fit-content;
+    color: var(--white);
+    margin-bottom: 70px;
+    font-weight: 400;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      left: -10px;
+      background: var(--light-blue);
+      border: 1px dashed var(--blue);
+      transition: none;
+    }
+
+    &:hover {
+      background-color: var(--primary-black);
+      top: 5px;
+      left: -5px;
+
+      img {
+        animation-play-state: paused;
+      }
+
+      &::before {
+        top: 5px;
+        left: -5px;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: -25px;
+      right: -30px;
+      animation: arrow-animation 0.5s alternate infinite;
+    }
+
+    @keyframes arrow-animation {
+      from {
+        bottom: -25px;
+      right: -30px;
+      }
+      to {
+        bottom: -30px;
+        right: -35px;
+      }
+    }
+  }
+}
+
+.Header .dashboard-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    left: 215px;
+    border: 1px dashed var(--blue);
+    background-color: var(--light-blue);
+  }
+
+  &::after {
+    left: inherit;
+    top: inherit;
+    right: 221px;
+    bottom: -15px;
+  }
+
+  img {
+    align-self: flex-start;
+    position: relative;
+
+    &:first-child {
+      align-self: center;
+    }
+  }
+}

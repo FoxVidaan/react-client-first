@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --ff-primary: 'Roboto', sans-serif;
+  --primary-black: #121212;
+  --secondary-grey: #E6E6E6;
+  --electric-blue: #2635E0;
+  --blue: #0084FF;
+  --light-blue: #0084FF1A;
+  --white: #FFFFFF
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

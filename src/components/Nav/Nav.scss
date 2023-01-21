@@ -1,0 +1,53 @@
+.Nav {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 65px;
+  border-bottom: 1px solid var(--secondary-grey);
+}
+
+.Nav .left,
+.Nav .right {
+  display: flex;
+  gap: 20px;
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    padding-inline-start: 0;
+
+    .nav-item {
+      padding: 0px 10px;
+      display: flex;
+      align-content: center;
+      gap: 10px;
+      color: var(--primary-black);
+      font-size: 16px;
+      font-weight: 500;
+
+      svg {
+        width: 14px;
+        align-self: center;
+
+        path {
+          fill: var(--primary-black);
+        }
+      }
+    }
+  }
+}
+
+.Nav .left .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 21.975px;
+
+  img {
+    width: 30px;
+  }
+}
